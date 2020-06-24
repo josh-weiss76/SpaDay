@@ -23,18 +23,25 @@ namespace SpaDay.Controllers
         }
 
         [HttpPost]
-        [Route("/User/Add")]
+        [Route("/user/add")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
             if (newUser.Password == verify)
             {
                 UserData.Add(newUser);
                 ViewBag.username = newUser.Username;
-                return View("Index");
+                return View("index");
             }
-            string errorMessage = "Passwords Do Not Match, Please Try Again.";
-            ViewBag.error = errorMessage;
-            return Redirect("/User/Add");
+            ViewBag.user = newUser;
+            return Redirect("/user/error");
         }
+
+        [HttpGet]
+        [Route("/user/error")]
+        public IActionResult Error()
+        {
+            return View();
+        }
+
     }
 }

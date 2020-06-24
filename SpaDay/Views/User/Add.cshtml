@@ -1,40 +1,17 @@
 ﻿<h1>New User Addition Page</h1>
-@if (ViewBag.error == null)
-{
-    <body>
-        <form method="post">
 
-            <label for="username">UserName</label><br />
-            <input name="username" type="text" /><br />
-            <label for="email">Email</label><br />
-            <input name="email" type="email" /><br />
-            <label for="password">Password</label><br />
-            <input name="password" type="password" /><br />
-            <label for="verify">Verify Password</label><br />
-            <input name="verify" type="password" /><br />
-            <br />
-            <input type="submit" value="Add User" /><br />
-
-        </form>
-    </body>
-}
-else
-{
-    <body>
-        <form method="post">
-            <h2>@ViewBag.error</h2>
-            <label for="username">UserName</label><br />
-            <input name="username" type="text" /><br />
-            <label for="email">Email</label><br />
-            <input name="email" type="email" /><br />
-            <label for="password">Password</label><br />
-            <input name="password" type="password" /><br />
-            <label for="verify">Verify Password</label><br />
-            <input name="verify" type="password" /><br />
-            <br />
-            <input type="submit" value="Add User" /><br />
-
-        </form>
-    </body>
-
-}
+<body>
+    <form method="post">
+        <label for="username">UserName</label><br />
+        <input name="username" type="text" /><br />
+        <label for="email">Email</label><br />
+        <input name="email" type="email" /><br />
+        <label for="password">Password</label><br />
+        <input name="password" type="password" /><br />
+        <label for="verify">Verify Password</label><br />
+        <input name="verify" type="password" /><br />
+        <br />
+        <input type="submit" value="Add User" /><br />
+    
+    </form>
+</body>
