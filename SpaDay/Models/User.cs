@@ -13,11 +13,13 @@ namespace SpaDay.Models
 
         public int Id { get; }
         private static int nextId = 1;
+        public DateTime SignUpTime { get; }
 
         public User()
         {
             Id = nextId;
             nextId++;
+            SignUpTime = DateTime.Now;
         }
 
         public User(string username, string email, string password) : this()

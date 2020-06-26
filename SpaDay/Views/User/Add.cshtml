@@ -1,17 +1,39 @@
 ﻿<h1>New User Addition Page</h1>
 
+@if (ViewBag.error != null)
+{
+    <p>@ViewBag.error</p>
+}
 <body>
-    <form method="post">
-        <label for="username">UserName</label><br />
-        <input name="username" type="text" /><br />
-        <label for="email">Email</label><br />
-        <input name="email" type="email" /><br />
-        <label for="password">Password</label><br />
-        <input name="password" type="password" /><br />
+    <form method="post" action="/User">
+        @if (ViewBag.error == null)
+        {
+            <label for="Username">UserName</label><br />
+            <input name="Username" type="text" /><br />
+        }
+        else
+        {
+            <label for="Username">UserName</label><br />
+            <input type="text" name="Username" value="@ViewBag.userName" />
+            <br />
+        }
+        @if (ViewBag.error == null)
+        {
+            <label for="Email">Email</label><br />
+            <input name="Email" type="email" /><br />
+        }
+        else
+        {
+            <label for="Email">Email</label><br />
+            <input type="text" name="Email" value="@ViewBag.eMail" />
+            <br />
+        }
+        <label for="Password">Password</label><br />
+        <input name="Password" type="password" /><br />
         <label for="verify">Verify Password</label><br />
         <input name="verify" type="password" /><br />
         <br />
         <input type="submit" value="Add User" /><br />
-    
+
     </form>
 </body>

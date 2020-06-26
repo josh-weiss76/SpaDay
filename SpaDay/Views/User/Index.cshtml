@@ -1,6 +1,13 @@
-﻿<h1>Welcome to the Fancy Spa @ViewBag.username</h1>
+﻿<h1>Welcome to the Fancy Spa @ViewBag.user.Username!</h1>
 <p>
-    <a asp-controller="Spa">Spa Treatments</a><br />
-    <a asp-controller="User" >Add User</a>
-
+    <a asp-controller="Spa" asp-action="Index">Spa Treatments</a><br />
+    <a asp-controller="User" asp-action="Add">Add User</a>
 </p>
+<div>
+    <h2>Account Details</h2>
+    <p>
+        Account created on @ViewBag.user.SignUpTime.<br />
+        The email account associated with this account is: @ViewBag.user.Email.<br />
+        Thank you for your patronage!
+    </p>
+</div>
