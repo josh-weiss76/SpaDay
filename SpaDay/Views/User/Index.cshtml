@@ -1,6 +1,6 @@
-﻿@model SpaDay.Models.User
+﻿@model SpaDay.Models.User;
 
-<h1>Welcome to our spa, @Model.Username!</h1>
+<h1>Welcome to our spa, @Model.Username !</h1>
 
 <p>
     <a asp-controller="User" asp-action="Add">Add User</a>
@@ -13,6 +13,9 @@
 
     <table class="table">
         <tr>
+            <th>
+                User ID
+            </th>
             <th>
                 Username
             </th>
