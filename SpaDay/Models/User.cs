@@ -6,16 +6,22 @@ namespace SpaDay.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public int Id { get; }
+        static private int nextId = 1;
+
+
 
         public User()
         {
+            Id = nextId;
+            nextId++;
         }
 
-        public User(string u, string e, string p)
+        public User(string username, string email, string password): this()
         {
-            Username = u;
-            Email = e;
-            Password = p;
+            Username = username;
+            Email = email;
+            Password = password;
         }
 
     }

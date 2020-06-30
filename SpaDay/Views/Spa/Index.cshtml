@@ -1,27 +1,30 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
+
+<p>
+    <a asp-controller="User" asp-action="Add">Add User</a>
+</p>
+
 <form method='post'>
     Skin type:
-    <br>    
+    <br>
     <select name='skintype'>
-        <option value='oily'>Oily</option>    
-        <option value='combination'>Combination</option>    
-        <option value='normal'>Normal</option>    
-        <option value='dry'>Dry</option>    
+        <option value='oily'>Oily</option>
+        <option value='combination'>Combination</option>
+        <option value='normal'>Normal</option>
+        <option value='dry'>Dry</option>
     </select>
     <br>
 
     Manicure or Pedicure?
-    <br>    
+    <br>
     <select name='manipedi'>
-        <option value='manicure'>Manicure</option>    
-        <option value='pedicure'>Pedicure</option>      
+        <option value='manicure'>Manicure</option>
+        <option value='pedicure'>Pedicure</option>
     </select>
     <br>
-    
-    <input type='submit' value='Submit'>    
-     
+
+    <input type='submit' value='Submit'>
+
 </form>
