@@ -38,17 +38,16 @@ namespace SpaDay.Controllers
                         Password = addUserViewModel.Password,
                         Email = addUserViewModel.Email
                     };
-                    UserData.Add(newUser);
-                    return Redirect("/User");
+                    return View("Index", newUser);
                 }
                 else
                 {
-                    return Redirect("/User");
+                    return View("Add", addUserViewModel);
                 }
             }
             else
             {
-                return View(addUserViewModel);
+                return View("Add", addUserViewModel);
             }
         }
         public IActionResult Delete()

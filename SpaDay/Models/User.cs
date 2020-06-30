@@ -23,6 +23,21 @@ namespace SpaDay.Models
             Email = email;
             Password = password;
         }
+        public override string ToString()
+        {
+            return Username;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is User @user &&
+                   Id == @user.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
 
     }
 }
